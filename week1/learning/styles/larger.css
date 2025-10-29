@@ -1,0 +1,43 @@
+@media (min-width: 38rem) {
+
+    /* keep main blocks centered at wide sizes */
+    header,
+    nav,
+    main,
+    footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* hide hamburger, show horizontal nav */
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        gap: .5rem;
+        /* small space between tabs */
+    }
+
+    /* horizontal tab look */
+    .navigation a {
+        border-bottom: none;
+        /* remove mobile separators */
+        padding: .6rem .9rem;
+        line-height: 1.1;
+    }
+
+    .navigation li {
+        border: 0;
+    }
+
+    .navigation li.current a {
+        background: #eee;
+        border-radius: 2px;
+    }
+}

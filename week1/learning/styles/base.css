@@ -1,0 +1,115 @@
+/* ----- Header ----- */
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: center;
+    /* center title/logo vertically */
+    column-gap: 8px;
+    padding: 5px 0 5px 10px;
+    border-bottom: 1px solid #ddd;
+    max-width: 900px;
+    margin: 0 auto;
+    /* center the header block */
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3D405B;
+}
+
+/* ----- Hamburger ----- */
+.hamburger {
+    background: none;
+    border: 0;
+    font-size: 2rem;
+    color: #3D405B;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* ----- Navigation (mobile default) ----- */
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #3D405B;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Active tab highlight applied to the LINK */
+.navigation li.current a {
+    background: #eee;
+}
+
+/* ----- Page spacing (avoid big gap under nav) ----- */
+nav {
+    padding-bottom: .25rem;
+}
+
+/* prevents margin collapse with h1 */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main h1 {
+    margin-top: .5rem;
+}
+/* ----- FOOTER ----- */
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: #ddd;
+}
