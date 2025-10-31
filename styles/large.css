@@ -19,14 +19,14 @@
 
     .navigation a {
         border-bottom: none;
-        border-right: 1px solid rgba(255, 255, 255, .15);
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .navigation li:last-child a {
         border-right: none;
     }
 
-    /* two-column top area */
+    /* two-column top area (About + Photo) */
     .top-panels {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -38,7 +38,7 @@
         padding-bottom: 0;
     }
 
-    /* footer stays stacked but centered in content width */
+    /* footer stays stacked but centered */
     footer {
         width: min(1100px, 100%);
         margin: 0 auto;
