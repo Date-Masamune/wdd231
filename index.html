@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jacob Gishwiller" />
+    <meta name="description" content="WDD 231 - Home page for Jacob Gishwiller" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacob Gishwiller | WDD 231</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/normal.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/home.svg" alt="Site logo" width="64" height="64">
+        <span>Jacob Gishwiller</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation"></button>
+    </header>
+
+    <nav id="primary-nav" class="navigation">
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="chamber/">Chamber</a></li>
+            <li><a href="final/">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="top-panels">
+            <section class="about">
+                <h2>About Me</h2>
+                <p>
+                    Massa facilisis per purus sit imperdiet curae amet. Et fames lorem mi phasellus congue
+                    nascetur enim consectetur sociosqu natoque risus. Odio vehicula libero nisl viverra augue
+                    commodo pretium vivamus at dui magna. Quam fringilla convallis ridiculus malesuada accumsan
+                    potenti magnis volutpat nulla ipsum. Dis maecenas et praesent class fringilla.
+                </p>
+            </section>
+
+            <section class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/student_profile.jpg" alt="Photo of Jacob Gishwiller" width="400" height="400"
+                    loading="lazy">
+            </section>
+        </div>
+
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filters">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="cse">CSE</button>
+                <button data-filter="wdd">WDD</button>
+            </div>
+
+            <div id="course-list" class="course-list">
+                <!-- JS will inject course cards here -->
+            </div>
+
+            <p class="total">The total credits for courses listed above is <span id="total-credits">0</span>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+            </a>
+            <a href="https://github.com/Date-Masamune" target="_blank" rel="noreferrer">
+                <img src="images/github.svg" alt="GitHub" width="32" height="32">
+            </a>
+            <a href="https://x.com/home" target="_blank" rel="noreferrer">
+                <img src="images/twitter-x.svg" alt="X (Twitter)" width="32" height="32">
+            </a>
+        </div>
+        <p id="copyright">© 2025 • Jacob Gishwiller • Utah, USA</p>
+        <p id="lastModified">Last modification: </p>
+    </footer>
+</body>
+
+</html>

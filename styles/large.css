@@ -1,0 +1,48 @@
+@media (min-width: 48rem) {
+
+    /* header + nav */
+    header {
+        grid-template-columns: 48px auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation a {
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .navigation li:last-child a {
+        border-right: none;
+    }
+
+    /* two-column top area */
+    .top-panels {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    main {
+        padding-bottom: 0;
+    }
+
+    /* footer stays stacked but centered in content width */
+    footer {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+}
