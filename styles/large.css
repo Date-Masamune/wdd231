@@ -1,6 +1,6 @@
 @media (min-width: 48rem) {
 
-    /* header + nav */
+    /* header + nav in one line */
     header {
         grid-template-columns: 48px auto;
     }

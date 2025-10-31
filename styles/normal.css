@@ -1,8 +1,10 @@
 :root {
     --bg: #f3f5f7;
     --panel: #ffffff;
+    --nav-dark: #101820;
+    /* top nav (blackish) */
     --accent: #243b53;
-    /* dark blue header bars */
+    /* section headers + footer */
     --text: #1f2933;
     --muted: #52616d;
     --radius: 0.5rem;
@@ -12,9 +14,6 @@
 body {
     background: var(--bg);
     color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 /* HEADER ---------------------------------------------------- */
@@ -58,7 +57,7 @@ header span {
 
 /* NAV ---------------------------------------------------- */
 .navigation {
-    background: #1a1a1a;
+    background: var(--nav-dark);
     display: none;
 }
 
@@ -77,7 +76,7 @@ header span {
     color: #fff;
     text-decoration: none;
     padding: .9rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
 }
 
 .navigation li.active a,
@@ -90,7 +89,6 @@ main {
     width: min(1100px, 100%);
     margin: 0 auto;
     padding: 1rem 1rem 1rem;
-    flex: 1 0 auto;
 }
 
 main h1 {
@@ -100,7 +98,7 @@ main h1 {
     color: var(--text);
 }
 
-/* panels */
+/* panels -------------------------------------------------- */
 .about,
 .student-photo,
 .courses {
@@ -109,8 +107,10 @@ main h1 {
     border-radius: var(--radius);
     margin-bottom: 1rem;
     overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .03);
 }
 
+/* section headers (match footer) */
 .about h2,
 .student-photo h2,
 .courses h2 {
@@ -122,12 +122,13 @@ main h1 {
     letter-spacing: .02em;
 }
 
+/* about body */
 .about p {
     padding: 1rem;
     line-height: 1.5;
 }
 
-/* student photo box */
+/* student photo box -------------------------------------- */
 .student-photo {
     text-align: center;
 }
@@ -142,10 +143,10 @@ main h1 {
     background: #ddd;
 }
 
-/* courses section */
+/* courses ------------------------------------------------- */
 .courses {
-    margin-bottom: 0.75rem;
-    /* tighten space before footer */
+    margin-bottom: .75rem;
+    /* pull footer closer */
 }
 
 .courses .filters {
@@ -164,9 +165,11 @@ main h1 {
     border-radius: .4rem;
     font-weight: 500;
     cursor: pointer;
+    transition: background .2s ease;
 }
 
-.courses .filters button.active {
+.courses .filters button.active,
+.courses .filters button:hover {
     background: var(--accent);
     color: #fff;
 }
@@ -193,6 +196,12 @@ main h1 {
     border-color: #10b981;
 }
 
+.course-card .left {
+    display: flex;
+    gap: .35rem;
+    flex-wrap: wrap;
+}
+
 .course-card span.code {
     font-weight: 600;
 }
@@ -211,29 +220,38 @@ main h1 {
 
 /* FOOTER ---------------------------------------------------- */
 footer {
-    background: #fff;
-    border-top: 1px solid #ddd;
-    padding: 1.25rem 1rem 2rem;
+    background: var(--accent);
+    /* same as section headers */
+    color: #fff;
+    padding: 1.5rem 1rem 2rem;
     text-align: center;
-    font-size: .85rem;
-    color: #1f2933;
-    margin-top: 0.25rem;
-    /* small gap from content */
+    margin-top: 0;
 }
 
 footer .social {
     display: flex;
     justify-content: center;
-    gap: 1.25rem;
+    gap: 1rem;
     margin-bottom: .75rem;
 }
 
+/* icon tiles so dark SVGs stay visible */
+footer .social a {
+    width: 46px;
+    height: 46px;
+    background: #fff;
+    border-radius: .6rem;
+    display: grid;
+    place-items: center;
+}
+
 footer .social img {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
 }
 
 #copyright,
 #lastModified {
     margin: .25rem 0;
+    font-size: .85rem;
 }
