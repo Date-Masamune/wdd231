@@ -1,0 +1,52 @@
+{
+    "ward_name": "Example 7th Ward",
+    "updated_at": "2025-11-03",
+    "families": [
+        {
+            "family_name": "Anderson",
+            "moved_in": "2025-08-15",
+            "people_count": 4,
+            "visited_by_bishopric": true,
+            "members": [
+                {
+                    "name": "Mark Anderson",
+                    "gender": "male",
+                    "birthdate": "1987-04-12"
+                },
+                {
+                    "name": "Samantha Anderson",
+                    "gender": "female",
+                    "birthdate": "1989-11-03"
+                },
+                {
+                    "name": "Ella Anderson",
+                    "gender": "female",
+                    "birthdate": "2014-06-21"
+                },
+                {
+                    "name": "Noah Anderson",
+                    "gender": "male",
+                    "birthdate": "2017-02-09"
+                }
+            ]
+        },
+        {
+            "family_name": "Fuentes",
+            "moved_in": "2025-10-01",
+            "people_count": 2,
+            "visited_by_bishopric": false,
+            "members": [
+                {
+                    "name": "Diego Fuentes",
+                    "gender": "male",
+                    "birthdate": "1993-09-17"
+                },
+                {
+                    "name": "Lucía Fuentes",
+                    "gender": "female",
+                    "birthdate": "1995-01-30"
+                }
+            ]
+        }
+    ]
+}
