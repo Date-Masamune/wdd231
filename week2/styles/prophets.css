@@ -1,0 +1,91 @@
+:root {
+    --bg: #f6f8fa;
+    --text: #1f2933;
+    --muted: #5b6b79;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --accent: #243b53;
+    --shadow: 0 6px 16px rgba(0, 0, 0, .06);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--accent);
+    letter-spacing: .2px;
+}
+
+main {
+    width: min(1100px, 100%);
+    margin: 1rem auto 2rem;
+    padding: 0 1rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: .6rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.card .content {
+    padding: .85rem .95rem 1rem;
+}
+
+.card h2 {
+    margin: .6rem .95rem 0;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    margin: .35rem 0;
+    color: var(--muted);
+    line-height: 1.35;
+    font-size: .95rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.25rem 1rem 2rem;
+    color: #eee;
+    background: var(--accent);
+}
