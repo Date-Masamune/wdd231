@@ -1,0 +1,74 @@
+{
+    "members": [
+        {
+            "name": "Prairie Coffee Roasters",
+            "membershipLevel": 3,
+            "category": "Food & Beverage",
+            "address": "123 Main St, Your City, ST 00000",
+            "phone": "+1-555-0100",
+            "email": "hello@prairiecoffee.example",
+            "website": "https://prairiecoffee.example",
+            "logo": "images/placeholder-logo.png"
+        },
+        {
+            "name": "Flatland Fitness",
+            "membershipLevel": 2,
+            "category": "Health & Wellness",
+            "address": "45 Elm Ave, Your City, ST 00000",
+            "phone": "+1-555-0123",
+            "email": "contact@flatlandfitness.example",
+            "website": "https://flatlandfitness.example",
+            "logo": "images/placeholder-logo.png"
+        },
+        {
+            "name": "Riverbank Realty",
+            "membershipLevel": 1,
+            "category": "Real Estate",
+            "address": "9 River Rd, Your City, ST 00000",
+            "phone": "+1-555-0199",
+            "email": "info@riverbankrealty.example",
+            "website": "https://riverbankrealty.example",
+            "logo": "images/placeholder-logo.png"
+        },
+        {
+            "name": "BrightTech IT Services",
+            "membershipLevel": 2,
+            "category": "Information Technology",
+            "address": "88 2nd St, Your City, ST 00000",
+            "phone": "+1-555-0177",
+            "email": "support@brighttech.example",
+            "website": "https://brighttech.example",
+            "logo": "images/placeholder-logo.png"
+        },
+        {
+            "name": "Harvest Bank",
+            "membershipLevel": 3,
+            "category": "Financial Services",
+            "address": "501 Market Blvd, Your City, ST 00000",
+            "phone": "+1-555-0155",
+            "email": "info@harvestbank.example",
+            "website": "https://harvestbank.example",
+            "logo": "images/placeholder-logo.png"
+        },
+        {
+            "name": "Summit Outdoor Gear",
+            "membershipLevel": 1,
+            "category": "Retail",
+            "address": "72 Ridge Ln, Your City, ST 00000",
+            "phone": "+1-555-0134",
+            "email": "hi@summitgear.example",
+            "website": "https://summitgear.example",
+            "logo": "images/placeholder-logo.png"
+        },
+        {
+            "name": "Willow Creek Dentistry",
+            "membershipLevel": 2,
+            "category": "Healthcare",
+            "address": "310 Oak St, Your City, ST 00000",
+            "phone": "+1-555-0112",
+            "email": "care@willowdent.example",
+            "website": "https://willowdent.example",
+            "logo": "images/placeholder-logo.png"
+        }
+    ]
+}

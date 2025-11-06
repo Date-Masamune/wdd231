@@ -1,0 +1,125 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #666;
+    --card: #fff;
+    --border: #e5e7eb;
+    --accent: #1f4fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.wrap {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding: 1rem;
+}
+
+/* Header/Nav */
+.site-header {
+    border-bottom: 1px solid var(--border);
+    background: #fafafa;
+}
+
+.site-header .wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.site-nav a {
+    margin-left: .75rem;
+    text-decoration: none;
+    color: var(--text);
+    padding: .4rem .6rem;
+    border-radius: .5rem;
+}
+
+.site-nav a.active,
+.site-nav a:focus,
+.site-nav a:hover {
+    background: #eceff8;
+    color: #000;
+}
+
+/* Footer */
+.site-footer {
+    border-top: 1px solid var(--border);
+    background: #f8f9fb;
+    color: var(--text);
+}
+
+.footer-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.footer-grid a {
+    color: inherit;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+
+.view-toggle {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.toggle {
+    padding: .5rem .9rem;
+    background: #f7f7f7;
+    border: 0;
+    cursor: pointer;
+}
+
+.toggle+.toggle {
+    border-left: 1px solid var(--border);
+}
+
+.toggle.is-active,
+.toggle[aria-pressed="true"] {
+    background: #1f2937;
+    color: #fff;
+}
+
+/* Visually hidden */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

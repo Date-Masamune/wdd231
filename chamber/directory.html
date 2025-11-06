@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Jacob Gishwiller" />
+    <meta name="description"
+        content="Business Directory for the local Chamber of Commerce. Browse members, switch between grid and list views, and find contact information." />
+    <title>Business Directory | Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Open Graph (Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Business Directory | Chamber of Commerce">
+    <meta property="og:description"
+        content="Find local businesses in our Chamber Directory. View as grid or list and connect instantly.">
+    <meta property="og:url" content="https://date-masamune.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://date-masamune.github.io/wdd231/chamber/images/og-directory.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Chamber of Commerce">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fonts (keep light) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS: normalize FIRST -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 48rem)">
+    <link rel="stylesheet" href="styles/directory.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="logo" href="../index.html">Chamber</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a class="active" href="directory.html" aria-current="page">Directory</a>
+                <a href="join.html">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <h1>Member Directory</h1>
+
+        <section class="controls" aria-label="View and filter controls">
+            <div class="view-toggle" role="group" aria-label="Toggle directory view">
+                <button id="gridBtn" class="toggle is-active" aria-pressed="true">Grid</button>
+                <button id="listBtn" class="toggle" aria-pressed="false">List</button>
+            </div>
+        </section>
+
+        <section id="directory" class="cards" aria-live="polite">
+            <!-- Cards/list injected by JS -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <h2 class="sr-only">Chamber Contact</h2>
+                <address>
+                    <strong>Chamber of Commerce</strong><br>
+                    123 Main St<br>
+                    Your City, ST 00000<br>
+                    <a href="mailto:info@chamber.example">info@chamber.example</a><br>
+                    <a href="tel:+15550100">(555) 0100</a>
+                </address>
+            </div>
+            <div class="dev">
+                <p><strong>WDD231 Class Project</strong><br>Jacob Gishwiller</p>
+                <p>© <span id="year"></span> Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/directory.js" defer></script>
+</body>
+
+</html>

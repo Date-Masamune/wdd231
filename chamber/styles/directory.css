@@ -1,0 +1,83 @@
+#directory {
+    width: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .75rem;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: .75rem;
+    padding: 1rem;
+    background: var(--card);
+    display: grid;
+    gap: .5rem;
+}
+
+.card header {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.card h2 {
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.card .meta p {
+    margin: .15rem 0;
+}
+
+.card .badges {
+    display: inline-flex;
+    gap: .4rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: .75rem;
+    padding: .2rem .5rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: #f4f6f8;
+}
+
+.badge.gold {
+    background: #fff9db;
+    border-color: #ffe58f;
+}
+
+.badge.silver {
+    background: #f5f7fb;
+    border-color: #d7dbe6;
+}
+
+.badge.member {
+    background: #eef7ff;
+    border-color: #cddcff;
+}
+
+/* Logos */
+.card img.logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: .5rem;
+    background: #fafafa;
+    border: 1px solid #eee;
+}
+
+/* LIST VIEW: hide images per rubric */
+.list .card img.logo {
+    display: none;
+}

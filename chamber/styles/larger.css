@@ -1,0 +1,5 @@
+@media (min-width:48rem) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
