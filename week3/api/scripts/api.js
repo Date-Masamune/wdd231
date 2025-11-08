@@ -1,6 +1,12 @@
-const apiKey = 'YOUR_API_KEY'; // <-- put your real key here
+const apiKey = '7859e2bf11f804126732c6aef9bc4409'; // 👈 replace
 const lat = 49.748689597200254;
 const lon = 6.638128103820769;
+
+const tempEl = document.querySelector('#current-temp');
+const iconEl = document.querySelector('#weather-icon');
+const capEl = document.querySelector('figure figcaption');
+
+tempEl.textContent = 'loading...';
 
 const url =
     'https://api.openweathermap.org/data/2.5/weather'
@@ -10,36 +16,36 @@ const url =
     + '&units=imperial'
     + '&lang=en';
 
-const tempEl = document.querySelector('#current-temp');
-const iconEl = document.querySelector('#weather-icon');
-const capEl = document.querySelector('figure figcaption');
-
-function toTitle(s) {
-    return String(s).replace(/\b\w/g, c => c.toUpperCase());
-}
+function toTitle(s) { return String(s).replace(/\b\w/g, c => c.toUpperCase()); }
 
 async function getWeather() {
     try {
         const res = await fetch(url);
+        const body = await res.json().catch(() => ({}));
+
         if (!res.ok) {
-            if (res.status === 401) throw new Error('Unauthorized (check API key)');
-            if (res.status === 404) throw new Error('Not found (check lat/lon)');
-            if (res.status === 429) throw new Error('Rate limited (too many requests)');
-            throw new Error(`HTTP ${res.status}`);
+            // Show exact reason from API if available
+            tempEl.textContent = `error ${res.status}`;
+            capEl.textContent = body?.message ? toTitle(body.message) : 'Request failed';
+            return;
         }
 
-        const data = await res.json();
-        // Guard against missing fields
-        const tempF = Math.round((data && data.main && data.main.temp) || 0);
+        const tempF = Math.round(body?.main?.temp ?? 0);
         tempEl.textContent = `${tempF} °F`;
 
-        const w = (data && data.weather && data.weather[0]) || { icon: '01d', description: 'clear sky' };
-        iconEl.src = `https://openweathermap.org/img/wn/${w.icon}@2x.png`;
-        iconEl.alt = w.description;
-        capEl.textContent = toTitle(w.description);
+        const w = body?.weather?.[0];
+        if (w?.icon) {
+            iconEl.src = `https://openweathermap.org/img/wn/${w.icon}@2x.png`;
+            iconEl.alt = w.description ?? 'weather';
+            capEl.textContent = toTitle(w.description ?? '');
+        } else {
+            iconEl.removeAttribute('src');
+            iconEl.alt = '';
+            capEl.textContent = 'No weather description';
+        }
     } catch (err) {
         console.error(err);
-        tempEl.textContent = '(unavailable)';
+        tempEl.textContent = 'error';
         capEl.textContent = 'Weather data unavailable';
     }
 }

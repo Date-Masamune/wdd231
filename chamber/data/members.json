@@ -1,74 +1,67 @@
 {
     "members": [
         {
-            "name": "Prairie Coffee Roasters",
+            "name": "Son Son Asian Eats",
             "membershipLevel": 3,
             "category": "Food & Beverage",
-            "address": "123 Main St, Your City, ST 00000",
-            "phone": "+1-555-0100",
-            "email": "hello@prairiecoffee.example",
-            "website": "https://prairiecoffee.example",
-            "logo": "images/placeholder-logo.png"
+            "address": "360 W 2650 N #3 Pleasant View, UT 84414",
+            "phone": "801-710-2448",
+            "website": "https://sonsoneats.com/",
+            "logo": "images/sonson.webp"
         },
         {
-            "name": "Flatland Fitness",
+            "name": "Anytime Fitness",
             "membershipLevel": 2,
             "category": "Health & Wellness",
-            "address": "45 Elm Ave, Your City, ST 00000",
-            "phone": "+1-555-0123",
-            "email": "contact@flatlandfitness.example",
-            "website": "https://flatlandfitness.example",
-            "logo": "images/placeholder-logo.png"
+            "address": "455 N Washington Blvd Suite 432, Harrisville, UT 84404",
+            "phone": "385-600-7060",
+            "website": "https://www.anytimefitness.com/locations/harrisville-utah-5306",
+            "logo": "images/anytime-fitness.webp"
         },
         {
-            "name": "Riverbank Realty",
+            "name": "Key Choice Realty LLC",
             "membershipLevel": 1,
             "category": "Real Estate",
-            "address": "9 River Rd, Your City, ST 00000",
-            "phone": "+1-555-0199",
-            "email": "info@riverbankrealty.example",
-            "website": "https://riverbankrealty.example",
-            "logo": "images/placeholder-logo.png"
+            "address": "4130 Alder Creek Dr, Pleasant View, UT 84414",
+            "phone": "801-391-5550",
+            "website": "https://www.keychoicerealty.com/",
+            "logo": "images/key-choice.webp"
         },
         {
-            "name": "BrightTech IT Services",
+            "name": "Proponent IT",
             "membershipLevel": 2,
             "category": "Information Technology",
-            "address": "88 2nd St, Your City, ST 00000",
-            "phone": "+1-555-0177",
-            "email": "support@brighttech.example",
-            "website": "https://brighttech.example",
-            "logo": "images/placeholder-logo.png"
+            "address": "3055 W 2600 N St, Ogden, UT 84404",
+            "phone": "801-621-2999",
+            "website": "https://proponentit.com/",
+            "logo": "images/proponant.webp"
         },
         {
-            "name": "Harvest Bank",
+            "name": "Bank of Utah",
             "membershipLevel": 3,
             "category": "Financial Services",
-            "address": "501 Market Blvd, Your City, ST 00000",
-            "phone": "+1-555-0155",
-            "email": "info@harvestbank.example",
-            "website": "https://harvestbank.example",
-            "logo": "images/placeholder-logo.png"
+            "address": "115 Washington Blvd, Ogden, UT 84404",
+            "phone": "801-399-4425",
+            "website": "https://www.bankofutah.com/locations/ben-lomond",
+            "logo": "images/Bank_of_Utah.webp"
         },
         {
-            "name": "Summit Outdoor Gear",
+            "name": "Smith & Edwards",
             "membershipLevel": 1,
             "category": "Retail",
-            "address": "72 Ridge Ln, Your City, ST 00000",
-            "phone": "+1-555-0134",
-            "email": "hi@summitgear.example",
-            "website": "https://summitgear.example",
-            "logo": "images/placeholder-logo.png"
+            "address": "3936 N 2000 W, Ogden, UT 84404",
+            "phone": "801-731-1120",
+            "website": "https://www.smithandedwards.com/",
+            "logo": "images/smith-edwards.webp"
         },
         {
-            "name": "Willow Creek Dentistry",
+            "name": "Mountain View Dental Care",
             "membershipLevel": 2,
             "category": "Healthcare",
-            "address": "310 Oak St, Your City, ST 00000",
-            "phone": "+1-555-0112",
-            "email": "care@willowdent.example",
-            "website": "https://willowdent.example",
-            "logo": "images/placeholder-logo.png"
+            "address": "539 Harrisville Rd F, Harrisville, UT 84404",
+            "phone": "801-786-0700",
+            "website": "https://www.mountainvistadentalcare.com/",
+            "logo": "images/mountain-view-dental.webp"
         }
     ]
 }
