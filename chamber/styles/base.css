@@ -1,5 +1,5 @@
 /* ================================
-   Chamber Base Styles - Full Drop
+   Chamber Base Styles - Clean
    ================================ */
 
 :root {
@@ -262,7 +262,7 @@ h2 {
    DIRECTORY GRID/LIST + CARDS
    ================================ */
 
-/* Grid view (cards) */
+/* Grid view */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -309,6 +309,7 @@ h2 {
     grid-column: 1 / -1;
 }
 
+/* Card logo */
 .card img.logo {
     width: 56px;
     height: 56px;
