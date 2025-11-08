@@ -19,7 +19,7 @@
     --transition-fast: 0.15s ease;
 }
 
-/* Global reset-ish */
+/* Global box model */
 *,
 *::before,
 *::after {
@@ -38,7 +38,7 @@ body {
     background-color: var(--bg);
 }
 
-/* Generic links */
+/* Links */
 a {
     color: var(--accent);
     text-decoration: none;
@@ -50,7 +50,7 @@ a:focus-visible {
     color: var(--accent-dark);
 }
 
-/* Wrapper */
+/* Layout wrapper */
 .wrap {
     max-width: 1100px;
     margin-inline: auto;
@@ -88,7 +88,7 @@ header .wrap {
     gap: 0.4rem;
 }
 
-/* Nav container */
+/* Nav container (desktop default) */
 .site-nav {
     display: flex;
     align-items: center;
@@ -117,9 +117,10 @@ header .wrap {
 }
 
 /* ================================
-   HAMBURGER (MOBILE NAV)
+   HAMBURGER NAV
    ================================ */
 
+/* Base: hidden on desktop */
 .nav-toggle {
     display: none;
     background: none;
@@ -135,17 +136,18 @@ header .wrap {
     outline-offset: 2px;
 }
 
+/* Bars */
 .nav-toggle span {
     display: block;
     width: 22px;
     height: 2px;
     background-color: var(--accent-dark);
-    margin: 4px 0;
+    margin: 3px 0;
     border-radius: 999px;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Mobile layout */
+/* Mobile: show burger, hide nav until open */
 @media (max-width: 768px) {
     .site-header .wrap {
         align-items: center;
@@ -153,12 +155,12 @@ header .wrap {
 
     .nav-toggle {
         display: inline-flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-end;
         justify-content: center;
     }
 
     .site-nav {
-        /* hidden by default; JS toggles .is-open */
         display: none;
         flex-direction: column;
         width: 100%;
@@ -177,14 +179,16 @@ header .wrap {
     }
 }
 
-/* Desktop layout */
+/* Desktop: show nav, hide burger */
 @media (min-width: 769px) {
-    .nav-toggle {
-        display: none;
-    }
-
     .site-nav {
         display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .nav-toggle {
+        display: none;
     }
 }
 
@@ -255,10 +259,10 @@ h2 {
 }
 
 /* ================================
-   DIRECTORY LAYOUT & CARDS
+   DIRECTORY GRID/LIST + CARDS
    ================================ */
 
-/* Grid view */
+/* Grid view (cards) */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -272,7 +276,7 @@ h2 {
     gap: 0.75rem;
 }
 
-/* Shared card styles */
+/* Card base */
 .card {
     background-color: var(--card);
     border: 1px solid var(--border);
@@ -297,7 +301,7 @@ h2 {
     border-color: var(--accent-soft);
 }
 
-/* Card header: logo + name */
+/* Card header */
 .card header {
     display: flex;
     align-items: center;
@@ -319,12 +323,11 @@ h2 {
     color: var(--accent-dark);
 }
 
-/* Badge container */
+/* Badges */
 .badges {
     margin-top: 0.25rem;
 }
 
-/* Membership badges */
 .badge {
     display: inline-flex;
     align-items: center;
@@ -337,7 +340,7 @@ h2 {
     margin-right: 0.25rem;
 }
 
-/* Default/member */
+/* Member */
 .badge.member {
     background-color: var(--accent-soft);
     color: var(--accent-dark);
@@ -358,7 +361,7 @@ h2 {
     border-color: #FBBF24;
 }
 
-/* Card meta/content */
+/* Meta info */
 .meta {
     grid-column: 1 / -1;
     font-size: 0.9rem;
@@ -373,7 +376,7 @@ h2 {
     font-size: 0.9rem;
 }
 
-/* List view tweak: more horizontal feel on wide screens */
+/* List view layout tweaks */
 .list .card {
     display: grid;
     grid-template-columns: 56px 2fr 1.6fr;
@@ -382,7 +385,6 @@ h2 {
 
 .list .card header {
     grid-column: auto;
-    align-items: center;
 }
 
 .list .meta {
