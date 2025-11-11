@@ -18,18 +18,23 @@ if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 if (lastModSpan) lastModSpan.textContent = document.lastModified;
 
 // ================= WEATHER (OpenWeatherMap) =================
-const WEATHER_API_KEY = '7859e2bf11f804126732c6aef9bc4409'; 
-const LAT = 41.223;  // Ogden, UT 
+// Get a free key at openweathermap.org and paste it here:
+const WEATHER_API_KEY = "7859e2bf11f804126732c6aef9bc4409";
+
+// Ogden, UT coords 
+const LAT = 41.223;
 const LON = -111.973;
-const UNITS = 'imperial';
+const UNITS = "imperial";
 
 async function loadWeather() {
     const currentEl = document.getElementById('weather-current');
     const forecastEl = document.getElementById('forecast');
 
-    if (!currentEl || !forecastEl || !WEATHER_API_KEY) {
-        if (currentEl) currentEl.textContent = 'Weather API key not configured.';
-        if (forecastEl) forecastEl.textContent = '';
+    if (!currentEl || !forecastEl) return;
+
+    if (!WEATHER_API_KEY || WEATHER_API_KEY === "YOUR_OPENWEATHERMAP_API_KEY") {
+        currentEl.textContent = "Weather API key not configured.";
+        forecastEl.textContent = "";
         return;
     }
 
@@ -38,9 +43,8 @@ async function loadWeather() {
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-
         const list = data.list || [];
-        if (!list.length) throw new Error('No forecast data');
+        if (!list.length) throw new Error("No forecast data");
 
         // Current = first item
         const now = list[0];
@@ -59,7 +63,7 @@ async function loadWeather() {
       </div>
     `;
 
-        // Simple 3-day forecast: take ~24h apart entries
+        // 3-day forecast: take one entry per ~24h (8*3h blocks)
         const daily = list.filter((_, i) => i % 8 === 0).slice(1, 4);
 
         forecastEl.innerHTML = daily.map(item => {
@@ -74,19 +78,19 @@ async function loadWeather() {
           <p class="forecast-desc">${d.charAt(0).toUpperCase() + d.slice(1)}</p>
         </div>
       `;
-        }).join('');
+        }).join("");
 
     } catch (err) {
-        console.error('Weather load failed:', err);
-        if (currentEl) currentEl.textContent = 'Unable to load weather data.';
-        if (forecastEl) forecastEl.textContent = '';
+        console.error("Weather load failed:", err);
+        currentEl.textContent = "Unable to load weather data.";
+        forecastEl.textContent = "";
     }
 }
 
 loadWeather();
 
 // ================= MEMBER SPOTLIGHTS =================
-const MEMBERS_URL = 'data/members.json';
+const MEMBERS_URL = "data/members.json";
 
 async function loadSpotlights() {
     const container = document.getElementById('spotlight-container');
@@ -98,23 +102,24 @@ async function loadSpotlights() {
         const data = await res.json();
         const members = Array.isArray(data) ? data : (data.members || []);
 
-        // Gold (3) or Silver (2) only
-        const qualified = members.filter(m =>
-            Number(m.membershipLevel) === 2 || Number(m.membershipLevel) === 3
-        );
+        // Gold (3) or Silver (2) members only
+        const qualified = members.filter(m => {
+            const lvl = Number(m.membershipLevel);
+            return lvl === 2 || lvl === 3;
+        });
 
         if (!qualified.length) {
-            container.innerHTML = '<p>No spotlight members available.</p>';
+            container.innerHTML = "<p>No spotlight members available.</p>";
             return;
         }
 
-        // Shuffle + take 2 or 3
+        // Shuffle and take up to 3
         qualified.sort(() => Math.random() - 0.5);
         const picks = qualified.slice(0, 3);
 
         container.innerHTML = picks.map(m => {
-            const lvl = Number(m.membershipLevel) === 3 ? 'Gold' : 'Silver';
-            const logo = m.logo || 'images/placeholder-logo.png';
+            const lvl = Number(m.membershipLevel) === 3 ? "Gold" : "Silver";
+            const logo = m.logo || "images/placeholder-logo.png";
             return `
         <article class="spotlight-card">
           <img src="${logo}" alt="${m.name} logo" loading="lazy" width="72" height="72"
@@ -122,17 +127,17 @@ async function loadSpotlights() {
           <div>
             <h3>${m.name}</h3>
             <p class="spotlight-level">${lvl} Member</p>
-            ${m.address ? `<p>${m.address}</p>` : ''}
-            ${m.phone ? `<p>${m.phone}</p>` : ''}
-            ${m.website ? `<p><a href="${m.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>` : ''}
+            ${m.address ? `<p>${m.address}</p>` : ""}
+            ${m.phone ? `<p>${m.phone}</p>` : ""}
+            ${m.website ? `<p><a href="${m.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>` : ""}
           </div>
         </article>
       `;
-        }).join('');
+        }).join("");
 
     } catch (err) {
-        console.error('Spotlights load failed:', err);
-        container.innerHTML = '<p>Unable to load member spotlights.</p>';
+        console.error("Spotlights load failed:", err);
+        container.innerHTML = "<p>Unable to load member spotlights.</p>";
     }
 }
 

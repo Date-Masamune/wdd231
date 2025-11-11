@@ -511,6 +511,61 @@ footer {
     color: var(--accent-dark);
 }
 
+
+/* ================================
+   HOME: HERO
+   ================================ */
+
+.hero {
+    background:
+        linear-gradient(to bottom, rgba(7, 71, 87, 0.65), rgba(7, 71, 87, 0.35)),
+        url("../images/hero.webp") center/cover no-repeat;
+    color: #ffffff;
+}
+
+.hero-inner {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 520px;
+    padding: 2.5rem 0 2rem;
+}
+
+.hero-text h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.hero-text p {
+    margin: 0 0 1rem;
+    font-size: 0.98rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: var(--accent-dark);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-cta:hover,
+.btn-cta:focus-visible {
+    background-color: var(--accent-soft);
+    color: var(--accent-dark);
+}
+
+
+
+
+
 /* ================================
    HOME: PANELS & SPOTLIGHTS
    ================================ */
@@ -528,6 +583,15 @@ footer {
     box-shadow: var(--shadow-soft);
     padding: 0.9rem 1rem;
     font-size: 0.9rem;
+}
+
+.panel {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .panel h2 {

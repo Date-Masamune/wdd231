@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Jacob Gishwiller" />
     <meta name="description"
-        content="Official Chamber of Commerce home page for Ogden & Pleasant View area businesses. Find events, weather, and member spotlights." />
+        content="Ogden Valley Chamber of Commerce home page. Find events, local weather, and featured chamber members." />
     <title>Chamber of Commerce | Home</title>
 
     <!-- Favicon -->
@@ -16,9 +16,9 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Chamber of Commerce | Home">
     <meta property="og:description"
-        content="Connecting local businesses, events, and community resources in the Ogden & Pleasant View area.">
+        content="Connecting Ogden-area businesses with events, resources, and opportunities.">
     <meta property="og:url" content="https://date-masamune.github.io/wdd231/chamber/">
-    <meta property="og:image" content="https://date-masamune.github.io/wdd231/chamber/images/og-home.jpg">
+    <meta property="og:image" content="https://date-masamune.github.io/wdd231/chamber/images/hero.webp">
     <meta property="og:site_name" content="Chamber of Commerce">
     <meta property="og:locale" content="en_US">
 
@@ -36,7 +36,7 @@
 <body>
     <header class="site-header">
         <div class="wrap">
-            <a class="logo" href="index.html">Chamber</a>
+            <a class="logo" href="index.html">Ogden Valley Chamber of Commerce</a>
 
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -55,32 +55,34 @@
 
     <main>
         <!-- HERO -->
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="wrap hero-inner">
                 <div class="hero-text">
-                    <h1>Ogden Valley Chamber of Commerce</h1>
-                    <p>Strengthening local business, fostering community, and creating connections across Weber County.
-                    </p>
+                    <h1 id="hero-title">Ogden Valley Chamber of Commerce</h1>
+                    <p>Supporting local businesses, fostering connections, and strengthening communities along the
+                        Wasatch
+                        Front.</p>
                     <a class="btn-cta" href="join.html">Join the Chamber</a>
                 </div>
             </div>
         </section>
 
-        <!-- PANELS: Events / Weather / Forecast -->
+
+        <!-- EVENTS / WEATHER / FORECAST -->
         <section class="wrap home-panels" aria-label="Local updates">
             <article class="panel" id="events-panel">
                 <h2>Upcoming Events</h2>
                 <ul class="events-list">
-                    <li><strong>Business After Hours</strong> &mdash; Nov 18 · Smith & Edwards Community Room</li>
-                    <li><strong>Small Business Saturday</strong> &mdash; Nov 30 · Downtown Ogden</li>
-                    <li><strong>Chamber Breakfast Meetup</strong> &mdash; Dec 5 · Local Diner</li>
+                    <!-- Static is fine per rubric -->
+                    <li><strong>Business After Hours</strong> — Nov 18 · Smith &amp; Edwards Community Room</li>
+                    <li><strong>Small Business Saturday</strong> — Nov 30 · Downtown Ogden</li>
+                    <li><strong>Chamber Breakfast Meetup</strong> — Dec 5 · Local Diner</li>
                 </ul>
             </article>
 
             <article class="panel" id="weather-panel">
                 <h2>Current Weather</h2>
                 <div id="weather-current">
-                    <!-- Filled by JS -->
                     <p>Loading current conditions...</p>
                 </div>
             </article>
@@ -88,7 +90,6 @@
             <article class="panel" id="forecast-panel">
                 <h2>3-Day Forecast</h2>
                 <div id="forecast">
-                    <!-- Filled by JS -->
                     <p>Loading forecast...</p>
                 </div>
             </article>
@@ -98,7 +99,7 @@
         <section class="wrap spotlights" aria-label="Member spotlights">
             <h2>Member Spotlights</h2>
             <div id="spotlight-container" class="spotlight-grid">
-                <!-- Spotlight cards injected by JS -->
+                <!-- Filled by JS -->
             </div>
         </section>
     </main>
