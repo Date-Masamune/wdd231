@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Jacob Gishwiller" />
+    <meta name="description"
+        content="Official Chamber of Commerce home page for Ogden & Pleasant View area businesses. Find events, weather, and member spotlights." />
+    <title>Chamber of Commerce | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chamber of Commerce | Home">
+    <meta property="og:description"
+        content="Connecting local businesses, events, and community resources in the Ogden & Pleasant View area.">
+    <meta property="og:url" content="https://date-masamune.github.io/wdd231/chamber/">
+    <meta property="og:image" content="https://date-masamune.github.io/wdd231/chamber/images/og-home.jpg">
+    <meta property="og:site_name" content="Chamber of Commerce">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 48rem)">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="logo" href="index.html">Chamber</a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="active" aria-current="page">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="wrap hero-inner">
+                <div class="hero-text">
+                    <h1>Ogden Valley Chamber of Commerce</h1>
+                    <p>Strengthening local business, fostering community, and creating connections across Weber County.
+                    </p>
+                    <a class="btn-cta" href="join.html">Join the Chamber</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PANELS: Events / Weather / Forecast -->
+        <section class="wrap home-panels" aria-label="Local updates">
+            <article class="panel" id="events-panel">
+                <h2>Upcoming Events</h2>
+                <ul class="events-list">
+                    <li><strong>Business After Hours</strong> &mdash; Nov 18 · Smith & Edwards Community Room</li>
+                    <li><strong>Small Business Saturday</strong> &mdash; Nov 30 · Downtown Ogden</li>
+                    <li><strong>Chamber Breakfast Meetup</strong> &mdash; Dec 5 · Local Diner</li>
+                </ul>
+            </article>
+
+            <article class="panel" id="weather-panel">
+                <h2>Current Weather</h2>
+                <div id="weather-current">
+                    <!-- Filled by JS -->
+                    <p>Loading current conditions...</p>
+                </div>
+            </article>
+
+            <article class="panel" id="forecast-panel">
+                <h2>3-Day Forecast</h2>
+                <div id="forecast">
+                    <!-- Filled by JS -->
+                    <p>Loading forecast...</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- SPOTLIGHTS -->
+        <section class="wrap spotlights" aria-label="Member spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+                <!-- Spotlight cards injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <h2 class="sr-only">Chamber Contact</h2>
+                <address>
+                    <strong>Ogden Valley Chamber of Commerce</strong><br>
+                    123 Main St<br>
+                    Ogden, UT 84404<br>
+                    <a href="mailto:info@chamber.example">info@chamber.example</a><br>
+                    <a href="tel:+15550100">(555) 0100</a>
+                </address>
+            </div>
+            <div class="dev">
+                <p><strong>WDD231 Class Project</strong><br>Jacob Gishwiller</p>
+                <p>© <span id="year"></span> Ogden Valley Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/home.js" defer></script>
+</body>
+
+</html>
