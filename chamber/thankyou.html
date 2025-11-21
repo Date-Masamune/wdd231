@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jacob Gishwiller">
+    <meta name="description" content="Thank you for applying to join the Ogden Valley Chamber of Commerce.">
+    <title>Chamber of Commerce | Thank You</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 48rem)">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="logo" href="index.html">Ogden Valley Chamber of Commerce</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html" class="active" aria-current="page">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <h1>Thank You for Your Application</h1>
+        <p>We’ve received your membership application. A chamber representative will contact you soon.</p>
+
+        <section aria-labelledby="summary-title" class="thankyou-summary">
+            <h2 id="summary-title">Application Summary</h2>
+            <dl>
+                <div>
+                    <dt>First Name</dt>
+                    <dd id="out-first"></dd>
+                </div>
+                <div>
+                    <dt>Last Name</dt>
+                    <dd id="out-last"></dd>
+                </div>
+                <div>
+                    <dt>Email</dt>
+                    <dd id="out-email"></dd>
+                </div>
+                <div>
+                    <dt>Mobile Phone</dt>
+                    <dd id="out-phone"></dd>
+                </div>
+                <div>
+                    <dt>Business / Organization</dt>
+                    <dd id="out-org"></dd>
+                </div>
+                <div>
+                    <dt>Submitted</dt>
+                    <dd id="out-timestamp"></dd>
+                </div>
+            </dl>
+        </section>
+
+        <p><a href="join.html">Back to application</a></p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <h2 class="sr-only">Chamber Contact</h2>
+                <address>
+                    <strong>Ogden Valley Chamber of Commerce</strong><br>
+                    123 Main St<br>
+                    Ogden, UT 84404<br>
+                    <a href="mailto:info@chamber.example">info@chamber.example</a><br>
+                    <a href="tel:+15550100">(555) 0100</a>
+                </address>
+            </div>
+            <div class="dev">
+                <p><strong>WDD231 Class Project</strong><br>Jacob Gishwiller</p>
+                <p>© <span id="year"></span> Ogden Valley Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // simple inline JS just for this small page is usually fine, or move to its own file
+        const params = new URLSearchParams(window.location.search);
+
+        const set = (id, key, fallback = '') => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const value = params.get(key) || fallback;
+            el.textContent = value;
+        };
+
+        set('out-first', 'first');
+        set('out-last', 'last');
+        set('out-email', 'email');
+        set('out-phone', 'phone');
+        set('out-org', 'organization');
+
+        const ts = params.get('timestamp');
+        const tsEl = document.getElementById('out-timestamp');
+        if (tsEl) {
+            if (ts) {
+                const d = new Date(ts);
+                tsEl.textContent = isNaN(d) ? ts : d.toLocaleString();
+            } else {
+                tsEl.textContent = 'Not provided';
+            }
+        }
+
+        const yearSpan = document.getElementById('year');
+        const lastModSpan = document.getElementById('lastModified');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+        if (lastModSpan) lastModSpan.textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

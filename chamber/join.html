@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jacob Gishwiller">
+    <meta name="description"
+        content="Apply to join the Ogden Valley Chamber of Commerce. Compare membership levels and submit your application.">
+    <title>Chamber of Commerce | Join</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chamber of Commerce | Join">
+    <meta property="og:description" content="Membership application for the Ogden Valley Chamber of Commerce.">
+    <meta property="og:url" content="https://date-masamune.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://date-masamune.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:site_name" content="Chamber of Commerce">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 48rem)">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="logo" href="index.html">Ogden Valley Chamber of Commerce</a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html" class="active" aria-current="page">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap join-layout">
+        <section class="join-main" aria-labelledby="join-title">
+            <h1 id="join-title">Join the Chamber</h1>
+            <p class="join-intro">
+                Complete this application to join the Ogden Valley Chamber of Commerce and choose the membership level
+                that
+                best fits your organization.
+            </p>
+
+            <form id="joinForm" method="get" action="thankyou.html" class="join-form">
+                <!-- FIRST NAME -->
+                <label>
+                    First Name
+                    <input type="text" name="first" title="First name" autocomplete="given-name" required>
+                </label>
+
+                <!-- LAST NAME -->
+                <label>
+                    Last Name
+                    <input type="text" name="last" title="Last name" autocomplete="family-name" required>
+                </label>
+
+                <!-- ORG TITLE -->
+                <label>
+                    Organizational Title
+                    <input type="text" name="title" title="Your title within the organization"
+                        autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}"
+                        placeholder="e.g., Marketing Director">
+                </label>
+
+                <!-- EMAIL -->
+                <label>
+                    Email Address
+                    <input type="email" name="email" title="Email address" autocomplete="email"
+                        placeholder="you@example.com" required>
+                </label>
+
+                <!-- MOBILE PHONE -->
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" title="Mobile phone number" autocomplete="tel" required>
+                </label>
+
+                <!-- BUSINESS NAME -->
+                <label>
+                    Business / Organization Name
+                    <input type="text" name="organization" title="Business or organization name"
+                        autocomplete="organization" required>
+                </label>
+
+                <!-- MEMBERSHIP LEVEL -->
+                <fieldset class="membership-fieldset">
+                    <legend>Membership Level</legend>
+                    <label>
+                        <input type="radio" name="membership" value="np" required>
+                        NP Membership (Non-profit, no fee)
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="bronze">
+                        Bronze Membership
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="silver">
+                        Silver Membership
+                    </label>
+                    <label>
+                        <input type="radio" name="membership" value="gold">
+                        Gold Membership
+                    </label>
+                </fieldset>
+
+                <!-- DESCRIPTION -->
+                <label>
+                    Business / Organization Description
+                    <textarea name="description" title="Brief description of your organization" rows="4"></textarea>
+                </label>
+
+                <!-- TIMESTAMP -->
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <!-- SUBMIT -->
+                <button type="submit" class="btn-primary">Submit Application</button>
+            </form>
+        </section>
+
+        <!-- MEMBERSHIP CARDS + MODALS -->
+        <aside class="membership-info" aria-label="Membership level details">
+            <h2>Membership Levels</h2>
+            <div class="membership-cards">
+                <!-- NP -->
+                <article class="membership-card" data-level="np">
+                    <h3>NP Membership</h3>
+                    <p class="membership-price">$0 / year · Non-profit only</p>
+                    <p>Perfect for registered non-profit organizations that want a voice in the community.</p>
+                    <button class="link-button" data-modal-target="modal-np">View benefits</button>
+                </article>
+
+                <!-- Bronze -->
+                <article class="membership-card" data-level="bronze">
+                    <h3>Bronze Membership</h3>
+                    <p class="membership-price">$150 / year</p>
+                    <p>Great for new businesses looking for basic visibility and networking.</p>
+                    <button class="link-button" data-modal-target="modal-bronze">View benefits</button>
+                </article>
+
+                <!-- Silver -->
+                <article class="membership-card" data-level="silver">
+                    <h3>Silver Membership</h3>
+                    <p class="membership-price">$300 / year</p>
+                    <p>Ideal for growing businesses wanting more promotion and training.</p>
+                    <button class="link-button" data-modal-target="modal-silver">View benefits</button>
+                </article>
+
+                <!-- Gold -->
+                <article class="membership-card" data-level="gold">
+                    <h3>Gold Membership</h3>
+                    <p class="membership-price">$600 / year</p>
+                    <p>Maximum exposure, sponsorships, and leadership opportunities.</p>
+                    <button class="link-button" data-modal-target="modal-gold">View benefits</button>
+                </article>
+            </div>
+        </aside>
+
+        <!-- MODALS -->
+        <dialog id="modal-np" class="membership-modal">
+            <form method="dialog" class="modal-close-form">
+                <button class="close-btn" aria-label="Close NP membership details">×</button>
+            </form>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>No annual membership fee for qualified non-profits.</li>
+                <li>Listing in the online chamber directory.</li>
+                <li>Access to quarterly nonprofit round-table.</li>
+                <li>Discounted tickets for chamber trainings.</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-bronze" class="membership-modal">
+            <form method="dialog" class="modal-close-form">
+                <button class="close-btn" aria-label="Close Bronze membership details">×</button>
+            </form>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>All NP benefits.</li>
+                <li>Ribbon-cutting ceremony for grand openings.</li>
+                <li>Basic social media shout-outs.</li>
+                <li>Access to member-only job board.</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-silver" class="membership-modal">
+            <form method="dialog" class="modal-close-form">
+                <button class="close-btn" aria-label="Close Silver membership details">×</button>
+            </form>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze benefits.</li>
+                <li>Priority placement in the chamber directory.</li>
+                <li>Two spotlight features on the home page per year.</li>
+                <li>Invitations to leadership luncheons.</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-gold" class="membership-modal">
+            <form method="dialog" class="modal-close-form">
+                <button class="close-btn" aria-label="Close Gold membership details">×</button>
+            </form>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver benefits.</li>
+                <li>Logo on chamber home page year-round.</li>
+                <li>Sponsorship opportunities for major events.</li>
+                <li>Custom marketing consult with chamber staff.</li>
+            </ul>
+        </dialog>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <h2 class="sr-only">Chamber Contact</h2>
+                <address>
+                    <strong>Ogden Valley Chamber of Commerce</strong><br>
+                    123 Main St<br>
+                    Ogden, UT 84404<br>
+                    <a href="mailto:info@chamber.example">info@chamber.example</a><br>
+                    <a href="tel:+15550100">(555) 0100</a>
+                </address>
+            </div>
+            <div class="dev">
+                <p><strong>WDD231 Class Project</strong><br>Jacob Gishwiller</p>
+                <p>© <span id="year"></span> Ogden Valley Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/join.js" type="module" defer></script>
+</body>
+
+</html>

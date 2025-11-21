@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Jacob Gishwiller" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jacob Gishwiller">
     <meta name="description"
-        content="Ogden Valley Chamber of Commerce home page. Find events, local weather, and featured chamber members." />
+        content="Ogden Valley Chamber of Commerce home page. Find events, local weather, and featured chamber members.">
     <title>Chamber of Commerce | Home</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -102,6 +102,35 @@
                 <!-- Filled by JS -->
             </div>
         </section>
+
+        <dialog id="courseModal" class="course-modal">
+            <form method="dialog" class="modal-close-form">
+                <button class="close-btn" aria-label="Close dialog">×</button>
+            </form>
+
+            <article class="modal-body" role="document" aria-labelledby="courseModalTitle">
+                <h2 id="courseModalTitle"></h2>
+                <p class="modal-subtitle"><span id="courseSubject"></span> <span id="courseNumber"></span> · <span
+                        id="courseCredits"></span> credits</p>
+
+                <section class="modal-section">
+                    <h3>Description</h3>
+                    <p id="courseDescription"></p>
+                </section>
+
+                <section class="modal-section">
+                    <h3>Certificate</h3>
+                    <p id="courseCertificate"></p>
+                </section>
+
+                <section class="modal-section">
+                    <h3>Technology Stack</h3>
+                    <p id="courseTech"></p>
+                </section>
+            </article>
+        </dialog>
+
+
     </main>
 
     <footer class="site-footer">
