@@ -842,7 +842,7 @@ footer {
     margin-top: 0.35rem;
 }
 
-.btn-primary {
+.join-submit {
     margin-top: 0.75rem;
     padding: 0.6rem 1.6rem;
     border-radius: 999px;
@@ -853,8 +853,8 @@ footer {
     cursor: pointer;
 }
 
-.btn-primary:hover,
-.btn-primary:focus-visible {
+.join-submit:hover,
+.join-submit:focus-visible {
     background-color: var(--accent-dark);
 }
 

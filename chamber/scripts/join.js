@@ -1,4 +1,4 @@
-// NAV TOGGLE
+// NAV + PAGE INIT
 document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
     const siteNav = document.querySelector('.site-nav');
@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Timestamp hidden field
     const tsInput = document.getElementById('timestamp');
     if (tsInput) {
-        const now = new Date();
-        // nice readable format
-        tsInput.value = now.toISOString();
+        tsInput.value = new Date().toISOString();
     }
 
     // Membership modals
     const modalButtons = document.querySelectorAll('[data-modal-target]');
     const modals = document.querySelectorAll('.membership-modal');
+    const closeButtons = document.querySelectorAll('.membership-modal .close-btn');
 
+    // Open on "View benefits"
     modalButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -39,12 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close modal when clicking backdrop
+    // Close when clicking backdrop
     modals.forEach(dialog => {
         dialog.addEventListener('click', (event) => {
             if (event.target === dialog) {
                 dialog.close();
             }
+        });
+    });
+
+    // Close when clicking X button
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dialog = btn.closest('dialog');
+            if (dialog) dialog.close();
         });
     });
 });
