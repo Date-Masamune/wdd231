@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jacob Gishwiller">
+    <meta name="description" content="Site plan for the Storm Safety & Preparedness Hub web project.">
+
+    <title>Storm Safety & Preparedness Hub | Site Plan</title>
+
+    <!-- Typography: Inter for headings and body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Project Site Plan CSS -->
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <h1>Storm Safety &amp; Preparedness Hub</h1>
+            <p class="tagline">Individual Project Site Plan</p>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <!-- SITE NAME -->
+        <section aria-labelledby="site-name-heading">
+            <h2 id="site-name-heading">Site Name</h2>
+            <p><strong>Proposed Name:</strong> Storm Safety &amp; Preparedness Hub</p>
+            <p>
+                This name clearly communicates that the site is focused on weather-related safety and practical
+                preparedness.
+                It feels approachable to everyday users while still sounding reliable and educational.
+            </p>
+            <p class="note">
+                Optional domain (for planning purposes only): <code>stormsafetyhub.org</code>
+            </p>
+        </section>
+
+        <!-- SITE PURPOSE -->
+        <section aria-labelledby="site-purpose-heading">
+            <h2 id="site-purpose-heading">Site Purpose</h2>
+            <p>
+                The Storm Safety &amp; Preparedness Hub will provide easy-to-understand guidance to help people prepare
+                for and
+                respond to hazardous weather. The site will focus on major threats such as tornadoes, severe
+                thunderstorms,
+                flash flooding, winter storms, and high winds.
+            </p>
+            <p>
+                The website will organize information into simple, actionable sections including:
+            </p>
+            <ul>
+                <li>Hazard-specific safety tips and “what to do before / during / after” breakdowns.</li>
+                <li>Readiness checklists and emergency kit recommendations for homes, cars, and small businesses.</li>
+                <li>Plain-language explanations of important weather terminology and alert types.</li>
+                <li>Live or regularly-updated weather information using a public weather API on the home page.</li>
+            </ul>
+            <p>
+                Overall, the purpose of the site is to make storm safety less intimidating and more practical, helping
+                visitors
+                feel confident and prepared instead of overwhelmed.
+            </p>
+        </section>
+
+        <!-- SCENARIOS -->
+        <section aria-labelledby="scenarios-heading">
+            <h2 id="scenarios-heading">User Scenarios</h2>
+            <p>
+                These example questions represent the kinds of things visitors to the site might be trying to learn or
+                accomplish. They will guide the structure and content of the three main pages.
+            </p>
+            <ul class="scenario-list">
+                <li>
+                    <strong>“What should I do if a tornado warning is issued for my area?”</strong><br>
+                    A visitor wants a simple, step-by-step guide on where to shelter, what to bring, and how to stay
+                    informed.
+                </li>
+                <li>
+                    <strong>“How do I build a basic emergency kit for storms and power outages?”</strong><br>
+                    A family or new homeowner is looking for a printable checklist of essential supplies.
+                </li>
+                <li>
+                    <strong>“What’s the difference between a watch, a warning, and an advisory?”</strong><br>
+                    A user wants quick definitions so they can react correctly when alerts pop up on their phone.
+                </li>
+                <li>
+                    <strong>“Where can I see current conditions and a simple 3-day forecast for my area?”</strong><br>
+                    A visitor wants to quickly check the weather in a way that highlights potential hazards, not just
+                    temperatures.
+                </li>
+            </ul>
+        </section>
+
+        <!-- COLOR SCHEME -->
+        <section aria-labelledby="colors-heading">
+            <h2 id="colors-heading">Color Scheme</h2>
+            <p>
+                The color palette is meant to feel calm, trustworthy, and slightly “weather themed” without being
+                alarming.
+                Blues and teals suggest reliability and safety, while a warm accent color can be used to gently
+                highlight
+                important alerts or calls to action.
+            </p>
+
+            <div class="color-grid">
+                <article class="color-card">
+                    <div class="swatch swatch-primary"></div>
+                    <h3>Primary Accent</h3>
+                    <p><strong>Hex:</strong> <code>#0B7285</code></p>
+                    <p>Used for links, key buttons, section accents, and important headings.</p>
+                </article>
+
+                <article class="color-card">
+                    <div class="swatch swatch-dark"></div>
+                    <h3>Dark Text / Heading</h3>
+                    <p><strong>Hex:</strong> <code>#111827</code></p>
+                    <p>Used for main body text and primary headings for strong contrast and readability.</p>
+                </article>
+
+                <article class="color-card">
+                    <div class="swatch swatch-bg"></div>
+                    <h3>Page Background</h3>
+                    <p><strong>Hex:</strong> <code>#F5F5F7</code></p>
+                    <p>Light neutral background color for the page body to reduce eye strain.</p>
+                </article>
+
+                <article class="color-card">
+                    <div class="swatch swatch-card"></div>
+                    <h3>Card Background</h3>
+                    <p><strong>Hex:</strong> <code>#FFFFFF</code></p>
+                    <p>Used behind sections, cards, and content blocks to create visual separation.</p>
+                </article>
+
+                <article class="color-card">
+                    <div class="swatch swatch-alert"></div>
+                    <h3>Alert / Highlight</h3>
+                    <p><strong>Hex:</strong> <code>#F97316</code></p>
+                    <p>Reserved for subtle highlights, alert labels, or callouts about hazardous conditions.</p>
+                </article>
+            </div>
+
+            <p class="note">
+                This site plan document itself uses these colors for the background, headings, accents, and content
+                cards as a
+                preview of the final project’s visual style.
+            </p>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section aria-labelledby="typography-heading">
+            <h2 id="typography-heading">Typography</h2>
+            <p>
+                To keep the site clean and easy to read in stressful situations (like checking safety info during a
+                storm),
+                typography will be simple and modern.
+            </p>
+
+            <dl class="type-list">
+                <div>
+                    <dt>Primary Font</dt>
+                    <dd>
+                        <strong>Inter</strong>, a sans-serif font family. It will be used for:
+                        <ul>
+                            <li>All headings (h1–h6) with heavier font-weights (600–700).</li>
+                            <li>Body text and paragraphs using regular weight (400).</li>
+                            <li>Navigation links, buttons, and labels.</li>
+                        </ul>
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Font Treatment</dt>
+                    <dd>
+                        Visual hierarchy will be created by combining font size, weight, and color:
+                        <ul>
+                            <li>Headings: darker color <code>#111827</code> and accent color <code>#0B7285</code> where
+                                appropriate.</li>
+                            <li>Body text: comfortable line-height and size, prioritizing readability on mobile.</li>
+                            <li>Buttons and links: slightly bolder and using the primary accent color.</li>
+                        </ul>
+                    </dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- WIREFRAME -->
+        <section aria-labelledby="wireframe-heading">
+            <h2 id="wireframe-heading">Home Page Wireframes</h2>
+            <p>
+                The home page will introduce the purpose of the site, highlight the most important safety content, and
+                give
+                quick access to current weather information. Two wireframes are planned: one for small screens (mobile)
+                and
+                one for larger screens (tablet/desktop).
+            </p>
+
+            <div class="wireframes">
+                <figure class="wireframe">
+                    <figcaption>Mobile Wireframe (Home Page)</figcaption>
+                    <pre>
++----------------------------------+
+|  Logo / Site Title               |
+|  Simple Nav (hamburger)          |
++----------------------------------+
+|  Hero:                          |
+|  - Short intro text              |
+|  - "Get Ready" button            |
++----------------------------------+
+|  Current Weather Panel           |
+|  - Location & conditions         |
+|  - 3-day simple forecast         |
++----------------------------------+
+|  Top Hazards Section             |
+|  - Cards: Tornado, Flood, etc.   |
++----------------------------------+
+|  Quick Checklists                |
+|  - Home kit link                 |
+|  - Car kit link                  |
++----------------------------------+
+|  Footer: links & attributions    |
++----------------------------------+
+          </pre>
+                </figure>
+
+                <figure class="wireframe">
+                    <figcaption>Desktop / Larger View Wireframe (Home Page)</figcaption>
+                    <pre>
++------------------------------------------------------+
+| Logo / Site Title           | Main Nav (horizontal)  |
++------------------------------------------------------+
+|                    HERO AREA                         |
+|  Intro text, short description, primary CTA button   |
++---------------------------+--------------------------+
+| Current Weather / Forecast| Featured Hazards         |
+| - Conditions & forecast   | - Grid of hazard cards   |
++---------------------------+--------------------------+
+|          Preparedness Checklists & Resources         |
+|  - Links to Emergency Kit, Family Plan, etc.         |
++------------------------------------------------------+
+| Footer: site info, contact, attributions             |
++------------------------------------------------------+
+          </pre>
+                </figure>
+            </div>
+
+            <p>
+                The final layout will follow this general structure while incorporating responsive CSS so that content
+                remains
+                easy to scan and interact with on any device.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span id="year"></span> Storm Safety &amp; Preparedness Hub &mdash; Project Site Plan</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple year helper to keep footer up to date
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
