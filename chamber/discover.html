@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jacob Gishwiller">
+    <meta name="description"
+        content="Discover Ogden Valley attractions, parks, trails, and venues that make this area a great place to live and do business.">
+    <title>Chamber of Commerce | Discover</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chamber of Commerce | Discover">
+    <meta property="og:description"
+        content="Explore things to do, local attractions, and community highlights around the Ogden Valley area.">
+    <meta property="og:url" content="https://date-masamune.github.io/wdd231/chamber/discover.html">
+    <meta property="og:image" content="https://date-masamune.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:site_name" content="Chamber of Commerce">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 48rem)">
+
+    <!-- JS (module so we can import the JSON .mjs file) -->
+    <script src="scripts/discover.js" type="module"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="logo" href="index.html">Ogden Valley Chamber of Commerce</a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="discover.html" class="active" aria-current="page">Discover</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- INTRO + VISIT MESSAGE -->
+        <section class="wrap discover-intro">
+            <h1>Discover Ogden Valley</h1>
+            <p class="discover-tagline">
+                From mountain trails to historic main streets, explore the places that make Ogden Valley a great place
+                to live,
+                visit, and do business.
+            </p>
+            <p id="visit-message" class="visit-message" aria-live="polite"></p>
+        </section>
+
+        <!-- GRID OF CARDS -->
+        <section class="wrap discover-section" aria-label="Places around Ogden Valley">
+            <h2 class="discover-section-title">Places to Explore</h2>
+            <div id="discoverGrid" class="discover-grid">
+                <!-- Cards injected by discover.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <h2 class="sr-only">Chamber Contact</h2>
+                <address>
+                    <strong>Ogden Valley Chamber of Commerce</strong><br>
+                    123 Main St<br>
+                    Ogden, UT 84404<br>
+                    <a href="mailto:info@chamber.example">info@chamber.example</a><br>
+                    <a href="tel:+15550100">(555) 0100</a>
+                </address>
+            </div>
+            <div class="dev">
+                <p><strong>WDD231 Class Project</strong><br>Jacob Gishwiller</p>
+                <p>© <span id="year"></span> Ogden Valley Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
