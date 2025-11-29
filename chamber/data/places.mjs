@@ -3,7 +3,7 @@ export const places = [
         id: "ogden-nature-center",
         name: "Ogden Nature Center",
         address: "966 W 12th St, Ogden, UT 84404",
-        image: "images/ogden-nature-center.webp",
+        image: "images/ogdennature.webp",
         alt: "Wooden boardwalk through wetlands at Ogden Nature Center",
         description:
             "A 152-acre nature preserve with walking trails, wildlife viewing, and environmental education programs."
@@ -30,7 +30,7 @@ export const places = [
         id: "pineview-reservoir",
         name: "Pineview Reservoir",
         address: "Pineview Reservoir, Huntsville, UT 84317",
-        image: "images/Pineview.webp",
+        image: "images/pineview.webp",
         alt: "Calm water and mountains surrounding Pineview Reservoir",
         description:
             "Popular for boating, paddleboarding, swimming, and fishing with stunning views of the Wasatch Mountains."
