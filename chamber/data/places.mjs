@@ -3,10 +3,10 @@ export const places = [
         id: "ogden-nature-center",
         name: "Ogden Nature Center",
         address: "966 W 12th St, Ogden, UT 84404",
-        image: "images/gden-nature-center.webp",
+        image: "images/ogden-nature-center.webp",
         alt: "Wooden boardwalk through wetlands at Ogden Nature Center",
         description:
-            "A 152–acre nature preserve with walking trails, wildlife viewing, and environmental education programs."
+            "A 152-acre nature preserve with walking trails, wildlife viewing, and environmental education programs."
     },
     {
         id: "historic-25th",
@@ -24,14 +24,14 @@ export const places = [
         image: "images/snowbasin.webp",
         alt: "Snow-covered ski slopes and lodge at Snowbasin Resort",
         description:
-            "World–class skiing in winter and hiking, mountain biking, and scenic gondola rides in the summer."
+            "World-class skiing in winter and hiking, mountain biking, and scenic gondola rides in the summer."
     },
     {
         id: "pineview-reservoir",
         name: "Pineview Reservoir",
         address: "Pineview Reservoir, Huntsville, UT 84317",
-        image: "images/ineview.webp",
-        alt: "Calm water and mountain scenery surrounding Pineview Reservoir",
+        image: "images/Pineview.webp",
+        alt: "Calm water and mountains surrounding Pineview Reservoir",
         description:
             "Popular for boating, paddleboarding, swimming, and fishing with stunning views of the Wasatch Mountains."
     },
@@ -40,7 +40,7 @@ export const places = [
         name: "Ogden Amphitheater",
         address: "343 E 25th St, Ogden, UT 84401",
         image: "images/ogdenamp.webp",
-        alt: "Outdoor stage and crowd at the Ogden Amphitheater during an evening event",
+        alt: "Outdoor stage and lawn seating at the Ogden Amphitheater",
         description:
             "Hosts concerts, outdoor movies, festivals, and community events in the heart of downtown."
     },
@@ -49,7 +49,7 @@ export const places = [
         name: "Union Station",
         address: "2501 Wall Ave, Ogden, UT 84401",
         image: "images/unionstation.webp",
-        alt: "Historic Union Station building with old train engines on display",
+        alt: "Historic Union Station building with trains on display",
         description:
             "A historic rail station that now houses museums, galleries, and event spaces celebrating Ogden’s heritage."
     },
@@ -58,7 +58,7 @@ export const places = [
         name: "North Fork Park",
         address: "5864 N 3300 E, Liberty, UT 84310",
         image: "images/northfork.webp",
-        alt: "Forest campground and mountain meadow at North Fork Park",
+        alt: "Pavilion and meadow at North Fork Park in the mountains",
         description:
             "Dark-sky certified park with camping, cross-country skiing, fat biking, and excellent stargazing."
     },
@@ -67,7 +67,7 @@ export const places = [
         name: "Ogden River Parkway",
         address: "Along the Ogden River, Ogden, UT 84401",
         image: "images/ogdenriver.webp",
-        alt: "Paved walking and biking trail along the Ogden River surrounded by trees",
+        alt: "Paved trail running along the Ogden River with trees",
         description:
             "A paved multi-use path that follows the river through town, connecting parks, trailheads, and neighborhoods."
     }
