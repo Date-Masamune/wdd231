@@ -1,0 +1,595 @@
+/* ================================
+   Design Tokens
+   ================================ */
+
+:root {
+    --bg: #F5F5F7;
+    --text: #111827;
+    --muted: #4B5563;
+
+    --accent: #0B7285;
+    --accent-dark: #064757;
+    --alert: #F97316;
+
+    --card-bg: #FFFFFF;
+    --border: #E5E7EB;
+
+    --radius-card: 0.75rem;
+    --shadow-soft: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+/* ================================
+   Global Reset-ish
+   ================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* Remove default margins but keep spacing via components */
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
+    margin: 0;
+}
+
+/* Links */
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+}
+
+/* Utility */
+.wrap {
+    max-width: 960px;
+    margin-inline: auto;
+    padding: 1.5rem 1rem 2.5rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* ================================
+   Header & Navigation
+   ================================ */
+
+.site-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1rem;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+}
+
+.logo-mark {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+/* Nav */
+.site-nav {
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    transform: translateY(-100%);
+    background-color: var(--card-bg);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 4rem 1.5rem 1.5rem;
+    transition: transform 0.22s ease-out;
+    z-index: 20;
+}
+
+.site-nav.is-open {
+    transform: translateY(0);
+}
+
+.site-nav a {
+    padding: 0.5rem 0;
+    font-weight: 500;
+}
+
+.site-nav a.active {
+    color: var(--accent-dark);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Nav toggle (hamburger) */
+.nav-toggle {
+    border: none;
+    background: transparent;
+    padding: 0.25rem;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--text);
+}
+
+/* ================================
+   Typography
+   ================================ */
+
+h1 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-dark);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-dark);
+}
+
+h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+    color: var(--accent-dark);
+}
+
+p {
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.intro {
+    color: var(--muted);
+}
+
+/* ================================
+   Hero
+   ================================ */
+
+.hero {
+    background: radial-gradient(circle at top left, rgba(11, 114, 133, 0.14), transparent),
+        linear-gradient(to bottom, rgba(7, 71, 87, 0.85), rgba(7, 71, 87, 0.65));
+    color: #ffffff;
+}
+
+.hero-inner {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+    min-height: 260px;
+}
+
+.hero-text p {
+    margin-bottom: 1rem;
+}
+
+.hero-visual img {
+    max-width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: var(--accent-dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: var(--accent-soft, #E6F4F7);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ================================
+   Home Panels
+   ================================ */
+
+.home-panels {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1.75rem;
+}
+
+.panel {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border);
+    padding: 1rem 1.1rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.panel-note {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/* Weather widget */
+.weather-current {
+    margin-top: 0.5rem;
+}
+
+.weather-forecast {
+    margin-top: 0.75rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.forecast-day {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+/* Featured hazards mini cards */
+.featured-hazards-grid {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.mini-card {
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--border);
+    background-color: #F9FAFB;
+}
+
+.mini-link {
+    font-size: 0.9rem;
+}
+
+/* Quick links */
+.quick-links {
+    margin-top: 1.75rem;
+}
+
+.quick-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.quick-card {
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border);
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-soft);
+}
+
+/* ================================
+   Hazards Page
+   ================================ */
+
+.hazards-main {
+    padding-top: 1.75rem;
+}
+
+.hazard-filters {
+    margin: 1rem 0 0.75rem;
+}
+
+.hazard-filters label {
+    font-size: 0.95rem;
+}
+
+.hazard-filters select {
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.3rem;
+}
+
+.hazard-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.hazard-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border);
+    padding: 0.9rem 1rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.hazard-card h3 {
+    margin-bottom: 0.25rem;
+}
+
+.hazard-category {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+}
+
+.hazard-level {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--alert);
+    margin-bottom: 0.35rem;
+}
+
+.hazard-card button {
+    margin-top: 0.4rem;
+}
+
+.error-message {
+    margin-top: 1rem;
+    color: #b91c1c;
+}
+
+/* Hazard modal */
+.hazard-modal {
+    max-width: 540px;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    padding: 1rem 1.2rem 1.2rem;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.35);
+}
+
+.hazard-modal::backdrop {
+    background-color: rgba(15, 23, 42, 0.5);
+}
+
+.modal-body h2 {
+    margin-bottom: 0.4rem;
+}
+
+.modal-summary {
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+}
+
+.modal-section {
+    margin-top: 0.6rem;
+}
+
+.modal-section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.close-btn {
+    border: none;
+    background: transparent;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    margin-left: auto;
+    display: inline-flex;
+    padding: 0.15rem 0.4rem;
+}
+
+/* ================================
+   Preparedness Page
+   ================================ */
+
+.prepared-main {
+    padding-top: 1.75rem;
+}
+
+.visit-message {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.checklist {
+    margin-top: 1.5rem;
+    padding: 1rem 1.1rem;
+    background-color: var(--card-bg);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.checklist-items {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: 0.5rem;
+}
+
+.checklist-items label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.progress {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.plan-section {
+    margin-top: 1.75rem;
+    padding: 1rem 1.1rem;
+    background-color: var(--card-bg);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.plan-form {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 0.75rem;
+}
+
+.plan-form label {
+    display: grid;
+    gap: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.plan-form input[type="text"],
+.plan-form input[type="email"],
+.plan-form select,
+.plan-form textarea {
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    font: inherit;
+}
+
+.plan-form fieldset {
+    border-radius: 0.6rem;
+    border: 1px solid var(--border);
+    padding: 0.75rem 0.9rem;
+}
+
+.plan-form fieldset legend {
+    padding: 0 0.2rem;
+    font-weight: 600;
+    color: var(--accent-dark);
+}
+
+.plan-form fieldset label {
+    display: flex;
+    gap: 0.45rem;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+/* ================================
+   Confirm / Attributions
+   ================================ */
+
+.confirm-main,
+.attributions-main {
+    padding-top: 1.75rem;
+}
+
+.summary-card {
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    background-color: var(--card-bg);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.summary-list {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.summary-list dt {
+    font-weight: 600;
+}
+
+.summary-list dd {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* ================================
+   Footer
+   ================================ */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    background-color: var(--card-bg);
+}
+
+.site-footer .wrap {
+    padding-block: 1rem;
+}
+
+.footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: var(--muted);
+}

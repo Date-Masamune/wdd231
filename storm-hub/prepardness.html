@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jacob Gishwiller">
+    <meta name="description"
+        content="Storm preparedness tools including home and car emergency kit checklists and a simple storm plan form.">
+
+    <title>Storm Safety &amp; Preparedness Hub | Preparedness</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Storm Preparedness Tools">
+    <meta property="og:description"
+        content="Build your home and car emergency kits and create a basic family storm plan.">
+    <meta property="og:url" content="https://date-masamune.github.io/wdd231/final/preparedness.html">
+    <meta property="og:image" content="https://date-masamune.github.io/wdd231/final/images/hero-storm.webp">
+    <meta property="og:site_name" content="Storm Safety & Preparedness Hub">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 48rem)">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="logo" href="index.html">
+                <span class="logo-mark" aria-hidden="true">⛈</span>
+                <span class="logo-text">Storm Safety &amp; Preparedness Hub</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="hazards.html">Hazards</a>
+                <a href="preparedness.html" class="active" aria-current="page">Preparedness</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap prepared-main">
+        <section aria-labelledby="prep-title">
+            <h1 id="prep-title">Preparedness Tools &amp; Checklists</h1>
+            <p class="intro">
+                Building your preparedness a little at a time is more important than doing everything at once. Use
+                these checklists and the storm plan form to get started.
+            </p>
+            <p id="return-message" class="visit-message" aria-live="polite"></p>
+        </section>
+
+        <!-- HOME KIT CHECKLIST -->
+        <section id="home-kit" class="checklist" aria-labelledby="home-kit-title">
+            <h2 id="home-kit-title">Home Emergency Kit</h2>
+            <p class="note">Track your progress. Your checked items are saved on this device.</p>
+            <div class="checklist-items" data-list="home">
+                <label>
+                    <input type="checkbox" data-item="water">
+                    Water (3 days supply per person)
+                </label>
+                <label>
+                    <input type="checkbox" data-item="nonperishable-food">
+                    Non-perishable food (3-day supply)
+                </label>
+                <label>
+                    <input type="checkbox" data-item="flashlight">
+                    Flashlight with extra batteries
+                </label>
+                <label>
+                    <input type="checkbox" data-item="first-aid">
+                    Basic first aid kit
+                </label>
+                <label>
+                    <input type="checkbox" data-item="radio">
+                    Battery or crank-powered weather radio
+                </label>
+                <label>
+                    <input type="checkbox" data-item="medications">
+                    Essential medications and copies of prescriptions
+                </label>
+                <label>
+                    <input type="checkbox" data-item="documents">
+                    Copies of important documents in a waterproof bag
+                </label>
+                <label>
+                    <input type="checkbox" data-item="cash">
+                    Small amount of emergency cash
+                </label>
+            </div>
+            <p id="homeProgress" class="progress"></p>
+        </section>
+
+        <!-- CAR KIT CHECKLIST -->
+        <section id="car-kit" class="checklist" aria-labelledby="car-kit-title">
+            <h2 id="car-kit-title">Car Emergency Kit</h2>
+            <p class="note">Especially important for winter weather and long drives.</p>
+            <div class="checklist-items" data-list="car">
+                <label>
+                    <input type="checkbox" data-item="blankets">
+                    Blankets or sleeping bag
+                </label>
+                <label>
+                    <input type="checkbox" data-item="jumper-cables">
+                    Jumper cables
+                </label>
+                <label>
+                    <input type="checkbox" data-item="ice-scraper">
+                    Ice scraper and small shovel
+                </label>
+                <label>
+                    <input type="checkbox" data-item="snacks">
+                    Non-perishable snacks and water
+                </label>
+                <label>
+                    <input type="checkbox" data-item="charger">
+                    Phone charger or battery bank
+                </label>
+                <label>
+                    <input type="checkbox" data-item="flares">
+                    Flares or reflective triangles
+                </label>
+                <label>
+                    <input type="checkbox" data-item="gloves">
+                    Warm clothing, hat, and gloves
+                </label>
+            </div>
+            <p id="carProgress" class="progress"></p>
+        </section>
+
+        <!-- STORM PLAN FORM -->
+        <section class="plan-section" aria-labelledby="plan-title">
+            <h2 id="plan-title">Basic Storm Plan Form</h2>
+            <p class="note">
+                Fill out this simple plan. On submission, you’ll see a summary of your answers that you can save or
+                print.
+            </p>
+
+            <form class="plan-form" method="get" action="plan-confirm.html">
+                <label>
+                    Full Name
+                    <input type="text" name="name" autocomplete="name" required>
+                </label>
+
+                <label>
+                    Email Address
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+
+                <label>
+                    City &amp; State
+                    <input type="text" name="location" autocomplete="address-level2" placeholder="e.g., Ogden, UT">
+                </label>
+
+                <label>
+                    Housing Type
+                    <select name="housing">
+                        <option value="">Select housing type</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="single-family">Single-family home</option>
+                        <option value="mobile-home">Mobile home / manufactured housing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+
+                <fieldset>
+                    <legend>Main Weather Concerns (choose all that apply)</legend>
+                    <label>
+                        <input type="checkbox" name="concerns" value="tornadoes">
+                        Tornadoes
+                    </label>
+                    <label>
+                        <input type="checkbox" name="concerns" value="flooding">
+                        Flooding
+                    </label>
+                    <label>
+                        <input type="checkbox" name="concerns" value="winter-storms">
+                        Winter storms
+                    </label>
+                    <label>
+                        <input type="checkbox" name="concerns" value="wind">
+                        High winds
+                    </label>
+                    <label>
+                        <input type="checkbox" name="concerns" value="heat">
+                        Extreme heat
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Do you currently have an emergency kit?</legend>
+                    <label>
+                        <input type="radio" name="hasKit" value="yes">
+                        Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="hasKit" value="in-progress">
+                        In progress
+                    </label>
+                    <label>
+                        <input type="radio" name="hasKit" value="no">
+                        Not yet
+                    </label>
+                </fieldset>
+
+                <label>
+                    Notes or Special Needs
+                    <textarea name="notes" rows="4"
+                        placeholder="List any medical needs, pets, mobility considerations, etc."></textarea>
+                </label>
+
+                <!-- hidden timestamp -->
+                <input type="hidden" name="timestamp" id="planTimestamp">
+
+                <button type="submit" class="btn-primary">Create My Plan Summary</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <h2 class="sr-only">Site Info</h2>
+                <p><strong>Storm Safety &amp; Preparedness Hub</strong></p>
+                <p>Educational project site for WDD 231.</p>
+            </div>
+            <div class="dev">
+                <p>© <span id="year"></span> Storm Safety &amp; Preparedness Hub</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+                <p>
+                    <a href="attributions.html">Attributions</a> ·
+                    <a href="https://example.com/your-video-url" target="_blank" rel="noopener">Project Demo Video</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/preparedness.js"></script>
+</body>
+
+</html>

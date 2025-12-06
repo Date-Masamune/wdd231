@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jacob Gishwiller">
+    <meta name="description"
+        content="Storm Safety & Preparedness Hub home page. Check current weather and access storm safety guides and preparedness tools.">
+
+    <title>Storm Safety &amp; Preparedness Hub | Home</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Storm Safety & Preparedness Hub">
+    <meta property="og:description"
+        content="Simple, practical guides to help you prepare for storms and severe weather.">
+    <meta property="og:url" content="https://date-masamune.github.io/wdd231/final/index.html">
+    <meta property="og:image" content="https://date-masamune.github.io/wdd231/final/images/hero-storm.webp">
+    <meta property="og:site_name" content="Storm Safety & Preparedness Hub">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 48rem)">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="logo" href="index.html">
+                <span class="logo-mark" aria-hidden="true">⛈</span>
+                <span class="logo-text">Storm Safety &amp; Preparedness Hub</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html" class="active" aria-current="page">Home</a>
+                <a href="hazards.html">Hazards</a>
+                <a href="preparedness.html">Preparedness</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="wrap hero-inner">
+                <div class="hero-text">
+                    <h1 id="hero-title">Be Ready Before the Storm</h1>
+                    <p>
+                        Simple, practical guides to help you prepare for tornadoes, severe
+                        thunderstorms, flooding, winter storms, and more.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="hazards.html">View Safety Guides</a>
+                        <a class="btn-secondary" href="preparedness.html">Build Your Plan</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <img src="images/hero-storm.webp" alt="" loading="lazy" width="480" height="320">
+                </div>
+            </div>
+        </section>
+
+        <!-- WEATHER + FEATURED HAZARDS -->
+        <section class="wrap home-panels" aria-label="Current conditions and key hazards">
+            <article class="panel" id="weather-panel">
+                <h2>Current Weather Snapshot</h2>
+                <p class="panel-note">
+                    Default location is a sample city. In real use you could adapt this to your area.
+                </p>
+                <div id="weather-current" class="weather-current">
+                    <p>Loading current conditions...</p>
+                </div>
+                <div id="weather-forecast" class="weather-forecast">
+                    <!-- Filled by weather.js -->
+                </div>
+            </article>
+
+            <article class="panel" id="featured-hazards">
+                <h2>Top Hazards to Know</h2>
+                <div class="featured-hazards-grid">
+                    <article class="mini-card">
+                        <h3>Tornadoes</h3>
+                        <p>What to do in a watch vs. warning and where to shelter safely.</p>
+                        <a href="hazards.html#tornado" class="mini-link">View tornado guide</a>
+                    </article>
+
+                    <article class="mini-card">
+                        <h3>Flash Flooding</h3>
+                        <p>Why a few inches of water on the road can be deadly and how to avoid it.</p>
+                        <a href="hazards.html#flash-flood" class="mini-link">View flood guide</a>
+                    </article>
+
+                    <article class="mini-card">
+                        <h3>Winter Storms</h3>
+                        <p>Staying warm, avoiding travel dangers, and preparing for power outages.</p>
+                        <a href="hazards.html#winter-storm" class="mini-link">View winter guide</a>
+                    </article>
+
+                    <article class="mini-card">
+                        <h3>High Winds</h3>
+                        <p>Securing loose items and avoiding falling limbs and power lines.</p>
+                        <a href="hazards.html#high-wind" class="mini-link">View wind guide</a>
+                    </article>
+                </div>
+            </article>
+        </section>
+
+        <!-- QUICK CHECKLIST LINKS -->
+        <section class="wrap quick-links" aria-label="Preparedness shortcuts">
+            <h2>Get Ready in Small Steps</h2>
+            <div class="quick-grid">
+                <article class="quick-card">
+                    <h3>Home Emergency Kit</h3>
+                    <p>Start or improve your home storm kit using a simple, trackable checklist.</p>
+                    <a href="preparedness.html#home-kit" class="mini-link">Open home kit checklist</a>
+                </article>
+                <article class="quick-card">
+                    <h3>Car Emergency Kit</h3>
+                    <p>Be ready if you get stranded on the road during winter weather or storms.</p>
+                    <a href="preparedness.html#car-kit" class="mini-link">Open car kit checklist</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <h2 class="sr-only">Site Info</h2>
+                <p><strong>Storm Safety &amp; Preparedness Hub</strong></p>
+                <p>Educational project site for WDD 231.</p>
+            </div>
+            <div class="dev">
+                <p>© <span id="year"></span> Storm Safety &amp; Preparedness Hub</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+                <p>
+                    <a href="attributions.html">Attributions</a> ·
+                    <a href="https://example.com/your-video-url" target="_blank" rel="noopener">Project Demo Video</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/weather.js"></script>
+</body>
+
+</html>
