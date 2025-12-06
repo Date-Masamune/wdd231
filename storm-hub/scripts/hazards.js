@@ -183,21 +183,28 @@ function renderHazardCards(hazards, container) {
 }
 
 function createHazardCardMarkup(hazard) {
-    const { id, name, category, riskLevel, summary } = hazard;
+    const { id, name, category, riskLevel, summary, image, alt } = hazard;
 
     const riskClass = (riskLevel || "Unknown").toLowerCase().replace(/\s+/g, "-");
 
     return `
     <article class="hazard-card" data-hazard-id="${id}">
+      <figure class="hazard-image-wrapper">
+        <img src="${image}" alt="${alt}" class="hazard-image">
+      </figure>
+
       <div class="hazard-content">
         <h3 class="hazard-title">${name}</h3>
+
         <p class="hazard-meta">
           <span class="hazard-risk hazard-risk--${riskClass}">
             ${riskLevel} risk
           </span>
           <span class="hazard-category-label">${category}</span>
         </p>
+
         <p class="hazard-summary">${summary}</p>
+
         <button class="hazard-details-btn" type="button">
           View safety details
         </button>
@@ -205,6 +212,7 @@ function createHazardCardMarkup(hazard) {
     </article>
   `;
 }
+
 
 /* ===============================
    MODAL HANDLERS

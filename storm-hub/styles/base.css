@@ -593,3 +593,22 @@ p {
     font-size: 0.9rem;
     color: var(--muted);
 }
+
+.hazard-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hazard-image-wrapper {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+.hazard-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
